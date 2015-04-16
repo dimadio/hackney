@@ -186,7 +186,7 @@ request(Method, URL, Headers, Body) ->
 %%      </li>
 %%  </ul>
 -spec request(term(), binary(), list(), term(), list())
-    -> {ok, integer(), list(), #client{}} | {error, term()}.
+    -> {ok, integer(), list(), #client{}} | {ok, #client{}} | {error, term()}.
 request(Method, #hackney_url{}=URL, Headers, Body, Options0) ->
     #hackney_url{transport=Transport,
                  host = Host,
